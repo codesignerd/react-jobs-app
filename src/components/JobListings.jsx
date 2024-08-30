@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { useState, useEffect } from 'react';
 import JobListing from './JobListing';
 import Spinner from './Spinner';
@@ -44,3 +45,7 @@ const JobListings = ({ isHome = false }) => {
 };
 
 export default JobListings;
+
+JobListings.propTypes = {
+  isHome: PropTypes.bool,
+};
