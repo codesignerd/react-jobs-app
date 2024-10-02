@@ -1,3 +1,5 @@
+import { PropTypes } from 'prop-types';
+
 const Hero = ({
   title = 'Become a React Dev',
   subtitle = 'Find the React job that fits your skills and needs',
@@ -17,3 +19,8 @@ const Hero = ({
 };
 
 export default Hero;
+
+Hero.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+};

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 
 const AddJobPage = ({ addJobSubmit }) => {
   const [type, setType] = useState('Full-Time');
@@ -239,3 +240,7 @@ const AddJobPage = ({ addJobSubmit }) => {
 };
 
 export default AddJobPage;
+
+AddJobPage.propTypes = {
+  addJobSubmit: PropTypes.func.isRequired,
+};

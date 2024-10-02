@@ -1,5 +1,6 @@
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
+import { PropTypes } from 'prop-types';
 
 const JobPage = ({ deleteJob }) => {
   const navigate = useNavigate();
@@ -111,3 +112,7 @@ const jobLoader = async ({ params }) => {
 };
 
 export { JobPage as default, jobLoader };
+
+JobPage.propTypes = {
+  deleteJob: PropTypes.func.isRequired,
+};

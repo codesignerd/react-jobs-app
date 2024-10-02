@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLoaderData, useParams, useNavigate } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 
 const EditJobPage = ({ updateJobSubmit }) => {
   const job = useLoaderData();
@@ -245,3 +246,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
 };
 
 export default EditJobPage;
+
+EditJobPage.propTypes = {
+  updateJobSubmit: PropTypes.func.isRequired,
+};
