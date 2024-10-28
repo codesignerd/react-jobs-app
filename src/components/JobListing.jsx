@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaMapMarker } from 'react-icons/fa';
 import { useState } from 'react';
@@ -50,3 +51,14 @@ const JobListing = ({ job }) => {
 };
 
 export default JobListing;
+
+JobListing.propTypes = {
+  job: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    salary: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+  }),
+};
